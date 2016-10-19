@@ -38,7 +38,7 @@ describe("applyClick", function() {
     expect(model.isNoughtToPlay).to.equal(false);
   });
 
-/*
+
   it("does nothing if the game is already over", function() {
     var model = modelBuilder().noughtToPlay().build();
     model.isGameOver = true;
@@ -50,7 +50,7 @@ describe("applyClick", function() {
     expect(model.winner).to.equal("cross");
     expect(model.isNoughtToPlay).to.equal(true);
   });
-*/
+
 
   it("places noughts and crosses alternately", function() {
     var model = modelBuilder().build();
@@ -124,4 +124,3 @@ describe("applyClick", function() {
   });
 
 });
-
