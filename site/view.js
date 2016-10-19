@@ -2,16 +2,16 @@
 A module to manipulate the DOM to reflect a given model.
 */
 exports.render = function(model) {
-  for (var x = 1; x <= 3; x++) {
-    for (var y = 1; y <= 3; y++) {
-    var id = "" + x + y;
-    var className = 'board-cell board-cell-' + model.board[x - 1][y - 1];
-    var el = document.getElementById(id);
+  for (let x = 1; x <= 3; x++) {
+    for (let y = 1; y <= 3; y++) {
+    let id = '' + x + y;
+    let className = 'board-cell board-cell-' + model.board[x - 1][y - 1];
+    let el = document.getElementById(id);
     el.className = className;
     }
   }
 
-  var gameState = document.getElementById('gameState');
+  let gameState = document.getElementById('gameState');
   if (model.isGameOver) {
     if (model.winner==='nought') {
       gameState.innerHTML = 'Game Over: Noughts Won!';
@@ -26,4 +26,3 @@ exports.render = function(model) {
     gameState.innerHTML = 'Crosses to play';
   }
 };
-
